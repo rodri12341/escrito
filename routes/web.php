@@ -26,7 +26,7 @@ Route::get('/login', function () {
 
 Route::post('/login/open', [UserController::class, 'loginUser']);
 
-Route::post('/register/create', [UserController::class, 'createUser'])->middleware(CheckSession::class);
+Route::post('/register/create', [UserController::class, 'createUser']);
 
 Route::get('/register', function () {
     return view('register');
